@@ -9,10 +9,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">   
     <div>
-    <nav class="w-full bg-gray-50 flex items-center fixed top-0 ">
+    <nav class="w-full bg-gray-50 flex items-center justify-center fixed top-0 ">
         <div class=" max-w-screen-xl px-6 py-3 mx-auto">
             <div class="flex items-center">
-                <ul class="flex flex-row font-semibold mt-0 mr-6 space-x-8 text-sm md:text-lg">
+                <ul class="flex flex-row font-semibold mt-0 px-4 space-x-8 text-sm md:text-lg">
                     <li>
                         <a href="#" class="text-gray-400  hover:underline" aria-current="page">Beranda</a>
                     </li>
