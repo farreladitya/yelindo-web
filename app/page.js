@@ -1,20 +1,22 @@
 import './globals.css'
+import Product from './product'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <div>
-<div class="flex flex-col md:flex-row bg-neutral-800">
+<div id='header' class="flex flex-col md:flex-row bg-neutral-800">
   <div class="md:w-1/2 md:order-2">
     <img src="https://media.discordapp.net/attachments/763335756403703839/1096415424708628540/foto_beranda_logo_baru.png?width=624&height=468" class="w-full" alt="Yelindo Logo" />
   </div>
  
   <div class="md:w-1/2 px-4 py-8 md:py-0 md:order-1">
-    <div className='md:p-6 md:mt-20 '>
-    <div class="text-gray-300 text-3xl md:text-4xl font-bold mb-4 flex items-center justify-center md:justify-start">PT. YELINDO SURYA JAYA</div>
-    <div class="text-gray-300 text-lg md:text-2xl font-semibold mb-1 flex items-center justify-center md:justify-start">PEDAGANG BESAR ALAT KESEHATAN</div>
-    <div class="text-gray-400 text-base md:text-lg font-semibold mb-6 flex items-center justify-center md:justify-start">Jl. Jambangan Kebon Agung No. 11 Surabaya</div>
+    <div className='md:p-6 md:mt-32 '>
+    <div class="text-gray-300 text-3xl md:text-5xl font-bold mb-4 flex items-center justify-center md:justify-start">PT. YELINDO SURYA JAYA</div>
+    <div class="text-gray-300 text-lg md:text-3xl font-semibold mb-1 flex items-center justify-center md:justify-start">PEDAGANG BESAR ALAT KESEHATAN</div>
+    <div class="text-gray-400 text-base md:text-xl font-semibold mb-6 flex items-center justify-center md:justify-start">Jl. Jambangan Kebon Agung No. 11 Surabaya</div>
     <div class="flex items-center justify-center md:justify-start">
-      <a href="https://yelindo.id/" class="bg-green-700 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg inline-flex items-center">
+      <a href="https://wa.me/08155252476/" class="bg-green-700 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg inline-flex items-center">
       <svg className='w-6 md:w-8' viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16 31C23.732 31 30 24.732 30 17C30 9.26801 23.732 3 16 3C8.26801 3 2 9.26801 2 17C2 19.5109 2.661 21.8674 3.81847 23.905L2 31L9.31486 29.3038C11.3014 30.3854 13.5789 31 16 31ZM16 28.8462C22.5425 28.8462 27.8462 23.5425 27.8462 17C27.8462 10.4576 22.5425 5.15385 16 5.15385C9.45755 5.15385 4.15385 10.4576 4.15385 17C4.15385 19.5261 4.9445 21.8675 6.29184 23.7902L5.23077 27.7692L9.27993 26.7569C11.1894 28.0746 13.5046 28.8462 16 28.8462Z" fill="#BFC8D0"/>
 <path d="M28 16C28 22.6274 22.6274 28 16 28C13.4722 28 11.1269 27.2184 9.19266 25.8837L5.09091 26.9091L6.16576 22.8784C4.80092 20.9307 4 18.5589 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z" fill="url(#paint0_linear_87_7264)"/>
@@ -35,63 +37,66 @@ export default function Home() {
   
 </div>
 
+{/* Produk */}
     <div>
-      <div className='bg-gray-100 text-[#5956E9] font-bold text-4xl p-8 flex items-center justify-center'>Produk</div>
-    <div class="bg-gray-100 px-8 gap-4 grid grid-cols-2 md:grid-cols-3 md:gap-20">
-<div class=" max-w-md rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer flex flex-col justify-center items-center">
+      <div className=' text-[#5956E9] font-bold text-4xl p-8 flex items-center justify-center'>Produk</div>
+    <div class=" min-[1000px]:px-48 gap-4 grid grid-cols-2 md:grid-cols-3 md:gap-20">
+<div class="bg-white max-w-md rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer flex flex-col justify-center items-center">
   <div>
-    <img src="https://media.ldlc.com/r1600/ld/products/00/05/82/02/LD0005820208_1.jpg" alt="" />
+    <img src="https://cdn.discordapp.com/attachments/1096660164439982181/1096722466656747581/1.png" alt="" />
   </div>
-  <div class="bg-white flex flex-col items-center justify-center">
-  <h3 class="text-xl font-semibold text-black text-center mb-4 md:p-4 min-[551px]:text-2xl min-[551px]:text-2xl md:text-3xl">Medikasa Kasa Hidrophile</h3>  
+  <div class="bg-white flex flex-col items-center justify-center ">
+  <h3 class="text-xl font-semibold text-black text-center mt-6 mb-4 md:p-4  min-[551px]:text-2xl md:text-3xl ">Medikasa Kasa Hidrophile</h3>  
   </div>
 </div>
-<div class="max-w-md  rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer flex flex-col justify-center items-center">
-  <div>
-    <img src="https://media.ldlc.com/r1600/ld/products/00/05/82/02/LD0005820208_1.jpg" alt="" />
+<div class="bg-white max-w-md  rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer flex flex-col justify-center items-center">
+  <div className='align-top'>
+    <img src="https://cdn.discordapp.com/attachments/1096660164439982181/1096722466891632710/2.png" alt="" />
   </div>
   <div class=" bg-white flex flex-col items-center justify-center">
-  <h3 class="text-xl font-semibold text-black text-center mb-4 md:p-4 min-[551px]:text-2xl md:text-3xl">Medikasa Kasa Hidrophile</h3>  
+  <h3 class="text-xl font-semibold text-black text-center mb-4 md:p-4 min-[551px]:text-2xl md:text-3xl">GEA Foley Catheter</h3>  
   </div>
 </div>
-<div class="max-w-md  rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer flex flex-col justify-center items-center">
+<div class="bg-white max-w-md  rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer flex flex-col justify-center items-center">
   <div>
-    <img src="https://media.ldlc.com/r1600/ld/products/00/05/82/02/LD0005820208_1.jpg" alt="" />
+    <img src="https://cdn.discordapp.com/attachments/1096660164439982181/1096722461476782090/3.png" alt="" />
   </div>
   <div class=" bg-white flex flex-col items-center justify-center">
-  <h3 class="text-xl font-semibold text-black text-center mb-4 md:p-4 min-[551px]:text-2xl md:text-3xl">Medikasa Kasa Hidrophile</h3>  
+  <h3 class="text-xl font-semibold text-black text-center mb-4 md:p-4 min-[551px]:text-2xl md:text-3xl">EasyTouch GCU</h3>  
   </div>
 </div>
-<div class="max-w-md  rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer flex flex-col justify-center items-center">
+<div class="bg-white max-w-md  rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer flex flex-col justify-center items-center">
   <div>
-    <img src="https://media.ldlc.com/r1600/ld/products/00/05/82/02/LD0005820208_1.jpg" alt="" />
+    <img src="https://cdn.discordapp.com/attachments/1096660164439982181/1096722461741031626/4.png" alt="" />
   </div>
   <div class=" bg-white flex flex-col items-center justify-center">
-  <h3 class="text-xl font-semibold text-black text-center mb-4 md:p-4 min-[551px]:text-2xl md:text-3xl">Medikasa Kasa Hidrophile</h3>  
+  <h3 class="text-xl font-semibold text-black text-center mb-4 md:p-4 min-[551px]:text-2xl md:text-3xl">NESCO Uric Acid Test Strips</h3>  
   </div>
 </div>
-<div class="max-w-md rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer flex flex-col justify-center items-center">
+<div class="bg-white max-w-md rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer flex flex-col justify-center items-center">
   <div>
-    <img src="https://media.ldlc.com/r1600/ld/products/00/05/82/02/LD0005820208_1.jpg" alt="" />
+    <img src="https://cdn.discordapp.com/attachments/1096660164439982181/1096722466010824785/5.png" alt="" />
   </div>
   <div class=" bg-white flex flex-col items-center justify-center">
-  <h3 class="text-xl font-semibold text-black text-center mb-4 md:p-4 min-[551px]:text-2xl md:text-3xl">Medikasa Kasa Hidrophile</h3>  
+  <h3 class="text-xl font-semibold text-black text-center mb-4 md:p-4 min-[551px]:text-2xl md:text-3xl">Golden Glove Latex</h3>  
   </div>
 </div>
-<div class="max-w-md rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer flex flex-col justify-center items-center">
+<div class="bg-white max-w-md rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer flex flex-col justify-center items-center">
   <div>
-    <img src="https://media.ldlc.com/r1600/ld/products/00/05/82/02/LD0005820208_1.jpg" alt="" />
+    <img src="https://cdn.discordapp.com/attachments/1096660164439982181/1096722466371538995/6.png" alt="" />
   </div>
   <div class=" bg-white flex flex-col items-center justify-center">
-  <h3 class="text-xl font-semibold text-black text-center mb-4 md:p-4 min-[551px]:text-2xl md:text-3xl">Medikasa Kasa Hidrophile</h3>  
+  <h3 class="text-xl font-semibold text-black text-center mb-4 md:p-4 min-[551px]:text-2xl md:text-3xl">Cosmo Med I.V. Cannula</h3>  
   </div>
 </div>
   </div>
-  <a href='#'><h3 className='text-right mt-7 mr-5 text-[#5956E9] font-bold text-sm md:text-lg '>Lihat Lebih Banyak...</h3></a>
+  <Link href="/product">
+  <h3 className='text-right mt-7 mr-5 text-[#5956E9] font-bold text-sm md:text-lg '>Lihat Lebih Banyak...</h3>
+  </Link>
 
   {/* Tentang Kami */}
   <div>
-  <div className=' text-[#5956E9] font-bold text-4xl p-8 flex items-center justify-center'>Tentang Kami</div>
+  <div id='tentangkami' className=' text-[#5956E9] font-bold text-4xl p-8 flex items-center justify-center'>Tentang Kami</div>
   <div class="mb-1 flex  items-center justify-center p-4">
   <div class="flex items-center justify-center md:w-3/4">
   <img src="https://media.discordapp.net/attachments/763335756403703839/1096388080556064778/logo_yel_baru.png?width=494&height=468" class="h-24 mr-3 md:h-36" alt="Yelindo Logo" />
@@ -128,6 +133,7 @@ export default function Home() {
 
   {/* Profil Kami */}
   <div>
+  <div className='min-[637px]:hidden'>
   <svg className='mt-6 w-screen h-[26px]'  viewBox="0 0 1440 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="-7" width="1453" height="26" fill="#5956E9"/>
 </svg>
@@ -135,6 +141,96 @@ export default function Home() {
 <rect x="-7" width="1453" height="26" fill="#868686"/>
 </svg>
   <div className=' text-[#5956E9] font-bold text-4xl p-8 flex items-center justify-center'>Profil Kami</div>
+  <div className=''>
+        <div className='flex flex-col justify-between text-center md:flex-row'>
+            <div
+              className='flex flex-col items-center justify-center mb-9' >
+              <img src='https://media.discordapp.net/attachments/1096660164439982181/1096678908641939486/iko.png' alt='' />
+              <h4 className=' bg-gray-700 my-3.5 h-[34.17px] w-[230.66px] rounded-[17.09px] py-2 font-poppins text-sm font-medium text-white'>
+                Iko
+              </h4>
+            </div>
+            <div
+              className='flex flex-col items-center justify-center mb-9' >
+              <img src='https://media.discordapp.net/attachments/1096660164439982181/1096679869913510009/lintang.png' alt='' />
+              <h4 className=' bg-gray-700 my-3.5 h-[34.17px] w-[230.66px] rounded-[17.09px] py-2 font-poppins text-sm font-medium text-white'>
+                Lintang
+              </h4>
+            </div>
+            <div
+              className='flex flex-col items-center justify-center mb-9' >
+              <img src='https://media.discordapp.net/attachments/1096660164439982181/1096679869389221888/rinto.png' alt='' />
+              <h4 className=' bg-gray-700 my-3.5 h-[34.17px] w-[230.66px] rounded-[17.09px] py-2 font-poppins text-sm font-medium text-white'>
+                Rinto
+              </h4>
+            </div>
+            <div
+              className='flex flex-col items-center justify-center mb-9' >
+              <img src='https://media.discordapp.net/attachments/1096660164439982181/1096679869640888330/yuni.png' alt='' />
+              <h4 className=' bg-gray-700 my-3.5 h-[34.17px] w-[230.66px] rounded-[17.09px] py-2 font-poppins text-sm font-medium text-white'>
+                Yuni
+              </h4>
+            </div>
+        </div>
+      </div>
+<svg className=' md:mt-6 w-screen h-[26px]'  viewBox="0 0 1440 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="-7" width="1453" height="26" fill="#868686"/>
+</svg>
+      <svg className='md:mt-3 w-screen h-[26px]'  viewBox="0 0 1440 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="-7" width="1453" height="26" fill="#5956E9"/>
+</svg>
+  </div>
+
+  {/* Profil Kami Desktop */}
+  <div className='max-[637px]:hidden'>
+  <svg className='mt-6 w-screen h-[26px]'  viewBox="0 0 1440 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="-7" width="1453" height="26" fill="#5956E9"/>
+</svg>
+<svg className=' md:mt-3 w-screen h-[26px]'  viewBox="0 0 1440 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="-7" width="1453" height="26" fill="#868686"/>
+</svg>
+              <div
+              className='flex flex-col items-center justify-center mt-6' >
+              <img src='https://media.discordapp.net/attachments/1096660164439982181/1096678908641939486/iko.png' alt='' />
+              <h4 className=' bg-gray-700 my-3.5 h-[34.17px] w-[230.66px] rounded-[17.09px] py-2  text-sm font-medium text-white text-center'>
+                Iko
+              </h4>
+            </div>
+ 
+  <div className=''>
+        <div className='px-52 flex flex-col justify-between text-center md:flex-row '>
+            <div
+              className='flex flex-col items-center justify-center mb-9' >
+              <img src='https://media.discordapp.net/attachments/1096660164439982181/1096679869913510009/lintang.png' alt='' />
+              <h4 className=' bg-gray-700 my-3.5 h-[34.17px] w-[230.66px] rounded-[17.09px] py-2  text-sm font-medium text-white'>
+                Lintang
+              </h4>
+            </div>
+            <div className=' text-[#5956E9] font-bold text-4xl p-8 flex items-center justify-center'>Profil Kami</div>
+            <div
+              className='flex flex-col items-center justify-center mb-9' >
+              <img src='https://media.discordapp.net/attachments/1096660164439982181/1096679869389221888/rinto.png' alt='' />
+              <h4 className=' bg-gray-700 my-3.5 h-[34.17px] w-[230.66px] rounded-[17.09px] py-2  text-sm font-medium text-white'>
+                Rinto
+              </h4>
+            </div>
+        </div>
+        <div
+              className='flex flex-col items-center justify-center mb-9' >
+              <img src='https://media.discordapp.net/attachments/1096660164439982181/1096679869640888330/yuni.png' alt='' />
+              <h4 className=' bg-gray-700 my-3.5 h-[34.17px] w-[230.66px] rounded-[17.09px] py-2  text-sm font-medium text-white text-center'>
+                Yuni
+              </h4>
+            </div>
+      </div>
+<svg className=' md:mt-6 w-screen h-[26px]'  viewBox="0 0 1440 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="-7" width="1453" height="26" fill="#868686"/>
+</svg>
+      <svg className='md:mt-3 w-screen h-[26px]'  viewBox="0 0 1440 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="-7" width="1453" height="26" fill="#5956E9"/>
+</svg>
+  </div>
+
   </div>
   </div>
   </div>
