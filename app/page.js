@@ -1,5 +1,4 @@
 import './globals.css'
-import Product from './product'
 import Link from 'next/link'
 
 export default function Home() {
@@ -59,7 +58,7 @@ export default function Home() {
 </div>
 <div class="bg-white max-w-md  rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer flex flex-col justify-center items-center">
   <div>
-    <img src="https://cdn.discordapp.com/attachments/1096660164439982181/1096722461476782090/3.png" alt="" />
+    <img src="https://media.discordapp.net/attachments/1096660164439982181/1096972274122362980/Mask_Group.png" alt="" />
   </div>
   <div class=" bg-white flex flex-col items-center justify-center">
   <h3 class="text-xl font-semibold text-black text-center mb-4 md:p-4 min-[551px]:text-2xl md:text-3xl">EasyTouch GCU</h3>  
